@@ -1,0 +1,22 @@
+{
+  "name": "booking-rules",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Node.js and TypeScript implementation of the BookingRules domain",
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "start": "npm run build --silent && node dist/src/console/main.js",
+    "test": "npm run build --silent && node --test \"dist/tests/**/*.test.js\"",
+    "test:unit": "npm run build --silent && node --test \"dist/tests/unit/*.test.js\"",
+    "test:integration": "npm run build --silent && node --test \"dist/tests/integration/*.test.js\"",
+    "check": "npm run build --silent && npm test --silent"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.0"
+  }
+}
